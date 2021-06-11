@@ -58,7 +58,7 @@ function App() {
   return (
     <div> 
       {sportsList.map(
-        skill => <GetBoxingSkill name={skill.name} image={skill.image}/>
+        skill => <GetBoxingSkill key={skill.id} name={skill.name} image={skill.image}/>
       )}  
     </div>
   )
