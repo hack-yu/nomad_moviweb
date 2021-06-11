@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+//import Post from './Post';
 
-function App() {
+function Post(props){
+  console.log(props);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>i hate {props.a}</div>
   );
 }
 
+function Get({a}){
+  console.log(a);
+  return (
+    <div>i hate {a}</div>
+  );
+}
+
+function App() {
+  return (
+    // html type statement
+    <div>
+      <Post a="1234"/>
+      <Post b="5678"/>
+      
+      <Get a="1234"/>
+      <Get b="5678"/>
+    </div>
+  );
+}
 export default App;
